@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veggie Flow - Sayuran Organik Segar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5fff6;
+        }
+
+        .header {
+            background-color: #2d5a27;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4a7c45;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        .judul {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1582515073490-39981397c445');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .produk {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .price {
+            color: #2d5a27;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .contact {
+            background-color: #e8f5e9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #2d5a27;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background-color: #2d5a27;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Veggie Flow</h1>
+        <p>Sayuran Organik Segar Langsung dari hasil P5 Hidroponik</p>
+    </header>
+
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#products">Produk</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+    <div class="judul" id="home">
+        <div>
+            <h2>Segar, Organik, Berkualitas Tinggi</h2>
+            <p>Dapatkan sayuran berkualitas langsung dari petani dadakan Smada</p>
+            <button>Lihat Produk</button>
+        </div>
+    </div>
+
+    <section class="produk" id="produk">
+        <h2>Produk Unggulan</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Sayuran Organik">
+                <h3>Paket Sayuran Harian</h3>
+                <p>Berisi 5 jenis sayuran segar pilihan</p>
+                <div class="price">Rp 25.000</div>
+                <button>Beli Sekarang!</button>
+                <button>Masukkan Keranjang</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Sayuran High Quality">
+                <h3>Sayuran Kualitas Tinggi</h3>
+                <p>Di panen dan di rawat dengan baik sehingga memiliki kualitas tinggi</p>
+                <div class="price">Rp 190.500</div>
+                <button>Beli Sekarang!</button>
+                <button>Masukkan Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Hubungi Kami</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Alamat: Jl. Sehat No. 123, Kota Hijau</p>
+        <p>Telepon: +62 812-3456-7890| Email: grocerieslove@gmal.com</p>
+        <p>&copy; 2024 Veggie Flow - All rights reserved</p>
+    </footer>
+
+    <script>
+        // Smooth scroll untuk navigasi
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah terkirim.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
